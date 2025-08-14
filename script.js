@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuHTML += `<div class="menu-category"><h2>${category}</h2>`;
                 groupedMenu[category].forEach(item => {
                     const prices = item.precios.map(p => {
-                        const sizeName = sizeMap[p.size] || p.size;
+                        const sizeName = sizeMap[p.size] ?? p.size;
                         return `${sizeName} $${p.precio}`.trim();
                     }).join(' / ');
 
